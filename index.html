@@ -50,7 +50,32 @@
 		}
 	</script>
 	
-
+	<script>
+		$(document).ready(function(){
+			// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+		
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
+		
+					// Store hash
+					var hash = this.hash;
+		
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 1500, function(){
+			 
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} // End if
+			});
+		});
+		</script>
 </head>
 	
 <body>
@@ -82,15 +107,18 @@
 					<i class="small-icon icon icon-tie"></i>
 					<h5 class="date">20 NOVEMBRO 2021</h5>
 					<h3 class="pre-title">Save The Date</h3>
-				        <h1 class="title">Jéssica <i class="icon icon-heart"></i> Matheus</h1>
+				        <h1 class="title">Jéssica <i class="icong icon-heart"></i> Matheus</h1>
 					
 				</div><!-- slider-content-->
+
 			</div><!--display-table-cell-->
+			
 		</div><!-- display-table-->
+		
 	</div><!-- main-slider -->
 
 	<!--<section class="section story-area center-text">-->
-	<section class="section  center-text" id="cover">
+	<section class="section  center-text" id="cover" href="#Desce">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-1"></div>
@@ -187,7 +215,7 @@
 	<section class="section center-text" id="cover">
 	<div class="quoto-area margin-top-btm">
 		<h3 class="quoto">
-			<i class="icon icon-quote"></i>O amor não reconhece
+			<i class="iconi icon-quote"></i>O amor não reconhece
 			barreiras. Salta obstáculos, pula cercas, penetra nas paredes
 			para chegar ao seu destino cheio de esperança.
 			<i class="iconf icon-quote"></i></h3>

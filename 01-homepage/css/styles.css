@@ -549,7 +549,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
 	background-image: url(../../images/slider-1-1600x900.jpg); background-size: cover; color: #fff; } */
 
 .main-slider {
-  height: 100vh;
+  height: 40vh;
   position: relative;
   z-index: 1;
   background-image: url(https://cdn.festalab.com.br/templates/wedding/rosas-claro/wedd/cover_desktop.jpg);
@@ -1018,7 +1018,7 @@ footer .copyright {
 13. CALENDAR STYLES
 --------------------------------- */
 
-.icon {
+.iconi {
   font-size: 1.1em;
   display: inline-block;
   line-height: inherit;
@@ -1032,4 +1032,88 @@ footer .copyright {
   line-height: inherit;
   color: #a34553;
   transform: rotate(360deg);
+}
+
+/* ---------------------------------
+13. SCROLL DOWN STYLES
+--------------------------------- */
+
+.icong {
+  -webkit-animation: mouse-scroll 0.5s infinite;
+  -moz-animation: mouse-scroll 0.5s infinite;
+  animation: mouse-scroll 0.5s infinite;
+}
+
+.icong {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -webkit-animation-direction: alternate;
+
+  animation-direction: alternate;
+  animation-delay: alternate;
+}
+
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---------------------------------
+13. SCROLLBAR STYLES
+--------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e55d73;
 }

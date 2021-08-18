@@ -1,0 +1,392 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+	<title>Jéssica & Matheus</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	
+	<!-- Font -->
+	
+	<link href="https://fonts.googleapis.com/css?family=Playball%7CBitter" rel="stylesheet">
+	
+	<!-- Stylesheets -->
+	
+	<link href="common-css/bootstrap.css" rel="stylesheet">
+	
+	
+	<link href="common-css/fluidbox.min.css" rel="stylesheet">
+	
+	<link href="common-css/font-icon.css" rel="stylesheet">
+	
+	
+	<link href="01-homepage/css/styles.css" rel="stylesheet">
+	
+	<link href="01-homepage/css/responsive.css" rel="stylesheet">
+	
+	<script
+	   src="https://code.jquery.com/jquery-3.4.1.js"
+	   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	   crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+                       
+                      
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/17001/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(msg){
+           $('#YesModal').modal('hide');
+           $('#success_tic').modal('show');
+                                 
+				},
+				error: function(){
+				   alert("Tive um erro, pode refazer? :(")
+			
+				}
+			});
+		}
+	</script>
+	
+
+</head>
+	
+<body>
+	
+	<header>
+		
+		<div class="container">
+		
+			<a class="logo" href="index.html"><img src="images/logo-white.png" alt="Logo"></a>
+			
+			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="icon icon-bars"></i></div>
+			
+			<ul class="main-menu visible-on-click" id="main-menu">
+				<li><a href="index.html">INÍCIO</a></li>
+				<li><a href="casamento.html">O CASAMENTO</a></li>
+				<li><a href="#Confirmar">CONFIRMAÇÃO</a></li>
+				<li><a href="presentes.html">LISTA DE PRESENTES</a></li>
+			</ul><!-- main-menu -->
+			
+		</div><!-- container -->
+	</header>
+	
+	
+	<div class="main-slider">
+		<div class="display-table center-text">
+			<div class="display-table-cell">
+				<div class="slider-content">
+				
+					<i class="small-icon icon icon-tie"></i>
+					<h5 class="date">20 NOVEMBRO 2021</h5>
+					<h3 class="pre-title">Save The Date</h3>
+				        <h1 class="title">Jéssica <i class="icon icon-heart"></i> Matheus</h1>
+					
+				</div><!-- slider-content-->
+			</div><!--display-table-cell-->
+		</div><!-- display-table-->
+	</div><!-- main-slider -->
+
+	<!--<section class="section story-area center-text">-->
+	<section class="section  center-text" id="cover">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+					
+					<div class="heading" id="Historia">
+						<h2 class="title">Vamos nos casar!</h2>
+						  <h3>Estamos nas nuvens e queremos compartilhar todo nosso amor!</h3>
+						<span class="heading-bottom"><i class="icon icon-star"></i></span>
+					</div>
+
+					<p class="desc margin-bottom">Por isso, criamos este site com um montão de coisas legais! Uma coisa importante, na sessão Confirmação de Presença, você poderá confirmar se vai ou não ao casamento.
+<br>Confirme o mais rápido possível por favor, que assim, organizar tudo será muito mais fácil.</p>
+					
+				</div><!-- col-sm-10 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- section -->
+	
+	<section class="section center-text" id="cover">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-sm-12">
+					<div class="heading">
+						<h2 class="title">Não se esqueça!</h2>
+						<span class="heading-bottom"><i class="icon icon-star"></i></span>
+					</div>
+				</div>
+				
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					
+					<div class="remaining-time">
+						<div id="clock"></div>
+					</div><!-- remaining-time -->
+				</div><!-- col-sm-10 -->
+				
+			</div><!-- row -->
+		    <a class="border-btn" href="#Confirmar">Confirme sua Presença</a>
+		</div><!-- container -->
+	</section><!-- section -->
+	
+	<section class="section w-details-area center-text" id="cover">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+					
+					<div class="heading">
+						<h2 class="title">Detalhes do Casamento</h2>
+						<span class="heading-bottom"><i class="icon icon-star"></i></span>
+					</div>
+					
+					<div class="wedding-details margin-bottom">
+						
+						<div class="w-detail right">
+							<i class="icon icon-ciurclke"></i>
+							<h4 class="title">CERIMÔNIA</h4>
+							<p>Optamos por algo mais familiar, cada pessoa convidada têm um significado importante para nós.</p>
+						</div><!-- w-detail -->
+						
+						<div class="w-detail left">
+							<i class="icon icon-wine-glass"></i>
+							<h4 class="title">BRINDE & JANTA</h4>
+							<p>Sinta-se a vontade, a festa também é sua, estamos muito alegres!</p>
+						</div><!-- w-detail -->
+						
+						<div class="w-detail right">
+							<i class="icon icon-cake"></i>
+							<h4 class="title">BOLO DO CASAMENTO</h4>
+							<p>Desta vez será um bolo fake, mas a janta.... Hummm, ela vai estar maravilhosa!</p>
+						</div><!-- w-detail -->
+						
+						<div class="w-detail left">
+							<i class="icon icon-camera"></i>
+							<h4 class="title">FOTOS</h4>
+							<p>Terá um momento reservado para as fotos, registre esse momento conosco!</p>
+						</div><!-- w-detail -->
+						<div class="w-detail right">
+							<i class="icon icon-instagram"></i>
+							<h4 class="title">HASHTAG</h4>
+							<p>Poste suas fotos e use a nossa hashtag!</p>
+							<p>#JEHEMATHEUS</p>
+						</div><!-- w-detail -->
+						
+					</div><!-- wedding-details -->
+					
+				</div><!-- col-sm-10 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- section -->
+
+	<section class="section center-text" id="cover">
+	<div class="quoto-area margin-top-btm">
+		<h3 class="quoto">
+			<i class="icon icon-quote"></i>O amor não reconhece
+			barreiras. Salta obstáculos, pula cercas, penetra nas paredes
+			para chegar ao seu destino cheio de esperança.
+			<i class="iconf icon-quote"></i></h3>
+		<h5 class="name">Maya Angeluo</h5>
+	</div>
+</section><!-- section -->
+
+	<section class="section center-text" id="cover">
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					
+					<div class="heading">
+						<h2 class="title">Nosso Grande Dia</h2>
+						<span class="heading-bottom"><i class="icon icon-star"></i></span>
+					</div>
+
+					<div class="desc margin-bottom">
+						<p class="desc">Com certeza este momento será lindo, será numa das capelas do Espaço Nobre Eventos, 
+							mais específico na capela do lago, venha se emocinar com a gente!</p>
+						
+						
+					</div>
+					
+				</div><!-- col-sm-10 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- section -->
+	
+	
+	<section class="section center-text" id="cover">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					
+					<div class="heading" id="Confirmar">
+						<h2 class="title">Confirme sua Presença</h2>
+						<span class="heading-bottom"><i class="icon icon-star"></i></span>
+					</div>
+
+					<div class="ceremony margin-bottom">
+						<div class="section__choices">
+							<a class="btn-2 margin-bottom gallery-btn" title="Eu vou" data-toggle="modal" data-target="#YesModal">Eu vou</a>
+							<a class="btn-2 margin-bottom gallery-btn" title="Não vou" data-toggle="modal" data-target="#NoModal">Não vou</a>
+                          
+
+	
+						</div>
+						
+						<a class="border-btn" href="http://www.espaconobreeventos.com/" target="_blank">SAIBA MAIS</a>
+					</div>
+					
+				</div><!-- col-sm-10 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- section -->
+
+	
+	  <!-- Modal -->
+
+<!-- Modal Sim-->
+  <div class="modal fade" id="YesModal" tabindex="-1" role="dialog" aria-labelledby="contato_modal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contato_modal">Confirmação de Presença</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+		Digite seu nome abaixo (inclussive de seus familiares nas observações)
+		 </br>
+	      
+		<form id="myForm" name="myForm">
+		  <div class="form-row">
+			  <input type="hidden" name="Timestamp" value="=HOJE()" />
+		    <div class="col">
+		      <input class="form-control" type="text" id="fname" name="fname" placeholder="Primeiro Nome">
+		    </div>
+			  </br>
+		    <div class="col">
+		      <input class="form-control" type="text" id="lname" name="lname" placeholder="Sobrenome">
+		    </div>
+		  </div>
+                       </br>
+		  <div class="form-group">
+		    <textarea class="form-control" id="obs-text" name="obs-text" placeholder="Escreva aqui as demais informações"></textarea>
+		  </div>
+		</form>
+	    
+	  </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Voltar</button>
+          <button class="btn btn-success" onclick='SubForm()'>Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal Não-->
+	
+<div class="modal fade" id="NoModal" tabindex="-1" role="dialog" aria-labelledby="contato_modal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contato_modal">Puxa vida! Pode me mandar uma mensagem?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">Entre em contato clicando no link abaixo: 
+	      </br>
+	      <a class="border-btn" href="https://wa.me/5554999307783?text=Infelizmente%20não%20poderemos%20ir%20ao%20seu%20casamento%20nossos%20nomes%20são:%0ANome:%20%0A*%20" target="_blank">WhatsApp</a>
+       </div>
+	      <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal Fim-->
+<!-- Modal -->
+<div id="success_tic" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+ 
+ <!-- Modal content-->
+    <div class="modal-content">
+      <a class="close" href="#" data-dismiss="modal">&times;</a>
+      <div class="page-body">
+    <div class="head">  
+      <h3 style="margin-top:5px;">Confirmado</h3>
+    </div>
+
+     <h1 style="text-align:center;">
+       <div class="checkmark-circle">
+       <div class="background"></div>
+       <div class="checkmark draw"></div>
+      </div>
+     </h1>
+    </div>
+   </div>
+  </div>
+ </div>
+<!-- FIM  -->
+	
+	<section class="section center-text" id="cover">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					
+					<div class="heading">
+						<h2 class="title">Localização</h2>
+						<span class="heading-bottom"><i class="icon icon-star"></i></span>
+					</div>
+					<a class="border-btn" href="https://www.google.com/maps/dir/?api=1&query=&destination=-29.1349141,-51.1095017&travelmode=driving" target="_blank">VER NO MAPA</a>
+
+				</div>
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- section -->
+	
+
+	<footer>
+		<div class="center-text" id="cover">
+			
+			<div class="logo-wrapper">
+				<i class="icon icon-star"></i>
+			</div>
+			
+			<p class="copyright">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Site feito <i class="icon-heart" aria-hidden="true"></i> Por <a>Matheus Cabral</a></p>
+			
+		</div><!-- container -->
+	</footer>
+	
+	<!-- SCIPTS -->
+
+	<script src="common-js/tether.min.js"></script>
+	
+	<!--<script src="common-js/bootstrap.js"></script>-->
+	
+	<script src="common-js/jquery.countdown.min.js"></script>
+	
+	<script src="common-js/jquery.fluidbox.min.js"></script>
+	
+	<script src="common-js/scripts.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="common-js/tether.min.js"></script>
+
+</body>
+</html>

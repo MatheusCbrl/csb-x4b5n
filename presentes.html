@@ -125,19 +125,65 @@
                 </div>
               </div>
 
-              <a
-                class="btn-2 margin-bottom gallery-btn"
-                data-toggle=""
-                href="#"
+              <div class="heading" id="Historia">
+                <h2 class="title">Sua presença será uma honra!</h2>
+                <h3>
+                  Mas como sabem, somos um casal começando do zero. Portanto,
+                  para nos ajudar nesse início, abaixo está nossa chave PIX para
+                  nos ajudar com o valor da janta 75,00. Contatomos com a
+                  presença de todos!!
+                </h3>
+                <span class="heading-bottom"
+                  ><i class="icon icon-star"></i
+                ></span>
+              </div>
+
+              <textarea style="display: none;" class="js-copytextarea">
+00020126710014BR.GOV.BCB.PIX0136c2d30480-fc47-4a9c-82b8-a55880ae71150209Casamento520400005303986540575.005802BR5920MATHEUS NUNES CABRAL6009SAO PAULO6226052255kO0G22wraMbWE4jsWwzD63040E0C</textarea
               >
-                LISTA DE PRESENTE
-              </a>
+              <p>
+                <button class="btn-2 js-textareacopybtn">
+                  COPIAR CHAVE PIX
+                </button>
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <div id="success_tic" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <a class="close" href="#" data-dismiss="modal">&times;</a>
+          <div class="page-body">
+            <div class="head">
+              <!-- <h3 style="margin-top: 5px;">Copiado!</h3>-->
+            </div>
 
+            <h1 style="text-align: center;">
+              <div class="checkmark-circle">
+                <div class="background"></div>
+                <div class="checkmark draw"></div>
+              </div>
+            </h1>
+          </div>
+          <div class="head">
+            <h3 style="margin-left: 25px;">QrCode Gerado:</h3>
+          </div>
+          <div>
+            <a href="images/pix.jpeg" data-fluidbox>
+              <img
+                class="margin-bottom"
+                src="images/pix.jpeg"
+                alt="Gallery Image"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIM  -->
     <footer>
       <div class="center-text" id="cover">
         <div class="logo-wrapper">
@@ -169,5 +215,24 @@
     <script src="common-js/jquery.fluidbox.min.js"></script>
 
     <script src="common-js/scripts.js"></script>
+
+    <script>
+      var copyTextareaBtn = document.querySelector(".js-textareacopybtn");
+
+      copyTextareaBtn.addEventListener("click", function (event) {
+        var copyTextarea = document.querySelector(".js-copytextarea");
+        copyTextarea.focus();
+        copyTextarea.select();
+
+        try {
+          var successful = document.execCommand("copy");
+          var msg = successful ? "successful" : "unsuccessful";
+          console.log("Copying text command was " + msg);
+          $("#success_tic").modal("show");
+        } catch (err) {
+          console.log("Oops, unable to copy");
+        }
+      });
+    </script>
   </body>
 </html>

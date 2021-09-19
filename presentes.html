@@ -138,9 +138,8 @@
                 ></span>
               </div>
 
-            <input type="text" value="Hello World" id="myInput">
-              <p>
-                <button id="btn" onclick="copyToCliBoard()" class="btn-2 js-textareacopybtn">
+               <p>
+                <button class="btn-2 js-textareacopybtn">
                   COPIAR CHAVE PIX
                 </button>
               </p>
@@ -223,14 +222,18 @@
 
 	    
 	    
-	   function copyToClipboard(text) {
-		  var input = document.body.appendChild(document.createElement("input"));
-		  input.value = text;
-		  input.focus();
-		  input.select();
+	    var copytextvalue = document.querySelector(".js-copytextarea").value;
+	    let btn = document.querySelector('.js-textareacopybtn');
+
+		btn.addEventListener('click', function(e) {
+
+		  let textArea = document.querySelector('.js-copytextarea');
+		  textArea.select();
 		  document.execCommand('copy');
-		  input.parentNode.removeChild(input);
-		}
+ 		console.log("Copying text command was " + copytextvalue);
+         	 $("#success_tic").modal("show");
+		});
+	    
 
     </script>
   </body>

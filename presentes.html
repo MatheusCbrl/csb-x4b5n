@@ -178,6 +178,10 @@
               />
             </a>
           </div>
+            <div class="head">
+            <h3 style="margin-left: 25px;">Conta para depósito:</h3>
+          </div>
+		<p>Agencia: Conta: </p>
         </div>
       </div>
     </div>
@@ -225,7 +229,7 @@
         try {
           var successful = document.execCommand("copy");
           var msg = successful ? "successful" : "unsuccessful";
-          console.log("Copying text command was " + msg);
+          console.log("Copying text command was " + msg + copyTextarea);
           $("#success_tic").modal("show");
         } catch (err) {
           console.log("Oops, unable to copy");

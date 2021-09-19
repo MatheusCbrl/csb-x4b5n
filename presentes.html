@@ -219,6 +219,8 @@
     <script src="common-js/scripts.js"></script>
 
     <script>
+	    
+      var copytextvalue = document.querySelector(".js-copytextarea").value;
       var copyTextareaBtn = document.querySelector(".js-textareacopybtn");
 
       copyTextareaBtn.addEventListener("click", function (event) {
@@ -229,7 +231,7 @@
         try {
           var successful = document.execCommand("copy");
           var msg = successful ? "successful" : "unsuccessful";
-          console.log("Copying text command was " + msg + copyTextarea);
+          console.log("Copying text command was " + msg + copytextvalue);
           $("#success_tic").modal("show");
         } catch (err) {
           console.log("Oops, unable to copy");

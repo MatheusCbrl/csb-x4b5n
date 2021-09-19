@@ -26,6 +26,10 @@
 /* ---------------------------------
 1. PRIMARY STYLES
 --------------------------------- */
+textarea {
+  resize: none;
+  outline: none;
+}
 
 #cover {
   background: url("https://cdn.festalab.com.br/templates/wedding/rosas-claro/wedd/cover_desktop.jpg")

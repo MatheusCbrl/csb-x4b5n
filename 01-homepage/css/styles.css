@@ -205,6 +205,7 @@ b.light-color {
   border: 1px solid #e45f74;
   background: #e45f74;
   color: #fff;
+  margin: 2px;
 }
 
 .btn:hover {

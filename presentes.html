@@ -219,22 +219,19 @@
     <script src="common-js/scripts.js"></script>
 
     <script>
-	    
-      var copytextvalue = document.querySelector(".js-copytextarea").value;
-      var copyTextareaBtn = document.querySelector(".js-textareacopybtn");
+	    var copytextvalue = document.querySelector(".js-copytextarea").value;
+	    let btn = document.querySelector('.js-textareacopybtn');
 
-      copyTextareaBtn.addEventListener("click", function (event) {
-        var copyTextarea = document.querySelector(".js-copytextarea");
-        copyTextarea.select();
-        try {
-          var successful = document.execCommand('copy');
-          var msg = successful ? "successful" : "unsuccessful";
-          console.log("Copying text command was " + msg + copytextvalue);
-          $("#success_tic").modal("show");
-        } catch (err) {
-          console.log("Oops, unable to copy");
-        }
-      });
+		btn.addEventListener('click', function(e) {
+
+		  let textArea = document.querySelector('.js-copytextarea');
+		  textArea.select();
+		  document.execCommand('copy');
+ 		console.log("Copying text command was " + copytextvalue);
+         	 $("#success_tic").modal("show");
+		});
+	    
+
     </script>
   </body>
 </html>

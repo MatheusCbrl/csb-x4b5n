@@ -138,7 +138,7 @@
                 ></span>
               </div>
 
-              <textarea style="display: none;" class="js-copytextarea">02011853001</textarea>
+              <textarea style="display: none;" class="js-copytextarea" value="02011853001">02011853001</textarea>
               <p>
                 <button class="btn-2 js-textareacopybtn">
                   COPIAR CHAVE PIX
@@ -224,7 +224,7 @@
       var copyTextareaBtn = document.querySelector(".js-textareacopybtn");
 
       copyTextareaBtn.addEventListener("click", function (event) {
-        var copyTextarea = document.querySelector(".js-copytextarea");
+        var copyTextarea = document.querySelector(".js-copytextarea").value;
         copyTextarea.focus();
         copyTextarea.select();
 

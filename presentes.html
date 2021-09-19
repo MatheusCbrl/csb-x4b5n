@@ -138,9 +138,9 @@
                 ></span>
               </div>
 
-            
+            <input type="text" value="Hello World" id="myInput">
               <p>
-                <button id="btn" class="btn-2 js-textareacopybtn">
+                <button id="btn" onclick="copyToCliBoard()" class="btn-2 js-textareacopybtn">
                   COPIAR CHAVE PIX
                 </button>
               </p>
@@ -223,18 +223,14 @@
 
 	    
 	    
-	    $(document).ready(function(){
-		var $temp = $("<input>");
-		var $url = $(location).attr('href');
-		$('#btn').click(function() {
-		$("body").append($temp);
-		$temp.val($url).select();
-		document.execCommand("copy");
-		$temp.remove();
-		$("p").text("URL copied!");
-		});
-		$("#success_tic").modal("show");
-	    });
+	   function copyToClipboard(text) {
+		  var input = document.body.appendChild(document.createElement("input"));
+		  input.value = text;
+		  input.focus();
+		  input.select();
+		  document.execCommand('copy');
+		  input.parentNode.removeChild(input);
+		}
 
     </script>
   </body>

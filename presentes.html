@@ -138,9 +138,9 @@
                 ></span>
               </div>
 
-             <textarea  class="btn-2 js-copytextarea" rows="1" cols="25" readonly > 02011853001</textarea>
+            
               <p>
-                <button class="btn-2 js-textareacopybtn">
+                <button id="btn" class="btn-2 js-textareacopybtn">
                   COPIAR CHAVE PIX
                 </button>
               </p>
@@ -170,7 +170,7 @@
             <h3 style="margin-left: 25px;">QrCode Gerado:</h3>
           </div>
           <div>
-         
+          <textarea  class="btn-2 js-copytextarea" rows="1" cols="25" readonly > 02011853001</textarea>
             <a href="images/pix.png" data-fluidbox>
               <img
                 class="margin-bottom"
@@ -220,18 +220,21 @@
     <script src="common-js/scripts.js"></script>
 
     <script>
-	    var copytextvalue = document.querySelector(".js-copytextarea").value;
-	    let btn = document.querySelector('.js-textareacopybtn');
 
-		btn.addEventListener('click', function(e) {
-
-		  let textArea = document.querySelector('.js-copytextarea');
-		  textArea.select();
-		  document.execCommand('copy');
- 		console.log("Copying text command was " + copytextvalue);
-         	 $("#success_tic").modal("show");
-		});
 	    
+	    
+	    $(document).ready(function(){
+		var $temp = $("<input>");
+		var $url = $(location).attr('href');
+		$('#btn').click(function() {
+		$("body").append($temp);
+		$temp.val($url).select();
+		document.execCommand("copy");
+		$temp.remove();
+		$("p").text("URL copied!");
+		});
+		$("#success_tic").modal("show");
+	    });
 
     </script>
   </body>

@@ -29,6 +29,8 @@
 textarea {
   resize: none;
   outline: none;
+  text-align: center;
+  border-color:#e45f74;
 }
 
 #cover {

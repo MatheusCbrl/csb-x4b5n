@@ -315,6 +315,43 @@
 		</div><!-- container -->
 	</section><!-- section -->
 	
+	
+
+    <section class="section galery-area center-text" id="cover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                            <div class="heading" id="Historia">
+                                <h2 class="title">Sua presença é nosso maior presente!</h2>
+
+                                <div class="desc margin-bottom">
+                                    <p class="desc">
+                                        Optamos por não fazer uma lista de presentes,
+                                    </p>
+                                    <p class="desc">
+                                        nossa sugestão de presente será em forma de dinheiro, abaixo pode copiar a chave PIX para depósito.
+                                    </p>
+                                </div>
+                                <span class="heading-bottom"><i class="icon icon-star"></i></span>
+                            </div>
+                            <div style="flex-direction: inherit; align-items: stretch; display: flex; flex-wrap: wrap; justify-content: center;">
+                                <textarea class="btn js-copytextarea" rows="1" cols="40" readonly="">                     2665f6c6-f291-467f-b789-bb4b8e35f1df</textarea>
+                                <button type="button" class="btn js-textareacopybtn btn-outline-danger">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path>
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
+                                    </svg>
+                                    Copiar Chave PIX
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="title">Depositar até 15/11/2021!</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+	
 	<section class="section center-text" id="cover">
 		<div class="container">
 			<div class="row">
@@ -414,6 +451,39 @@
    </div>
   </div>
  </div>
+
+<div id="success_tic_Gift" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <a class="close" href="#" data-dismiss="modal">&times;</a>
+            <div class="page-body">
+              <div class="head">
+                <!-- <h3 style="margin-top: 5px;">Copiado!</h3>-->
+              </div>
+  
+              <h1 style="text-align: center;">
+                <div class="checkmark-circle">
+                  <div class="background"></div>
+                  <div class="checkmark draw"></div>
+                </div>
+              </h1>
+            </div>
+            <div class="head">
+              <h3 style="margin-left: 25px;">QrCode Gerado:</h3>
+            </div>
+            <div>
+              <a href="images/pix.png" data-fluidbox>
+                <img
+                  class="margin-bottom"
+                  src="images/pix.png"
+                  alt="Gallery Image"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 <!-- FIM  -->
 	
 
@@ -449,6 +519,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <script src="common-js/tether.min.js"></script>
-
+        <script>
+                var copytextvalue = document.querySelector(".js-copytextarea").value;
+                let btn = document.querySelector(".js-textareacopybtn");
+    
+                btn.addEventListener("click", function (e) {
+                    let textArea = document.querySelector(".js-copytextarea");
+                    textArea.select();
+                    document.execCommand("copy");
+                    console.log("Copying text command was " + copytextvalue);
+                    $("#success_tic_Gift").modal("show");
+                });
+     </script>
 </body>
 </html>

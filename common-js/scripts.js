@@ -50,7 +50,7 @@
 function countdownTime(){
 	
 	if(isExists('#clock')){
-		$('#clock').countdown('2021/11/20', function(event){
+		$('#clock').countdown('2024/09/28', function(event){
 			var $this = $(this).html(event.strftime(''
 				+ '<div class="time-sec"><span class="title">%D</span> dias </div>'
 				+ '<div class="time-sec"><span class="title">%H</span> horas </div>'
